@@ -15,6 +15,10 @@
         //Позволяет работать с пакетами, которые используют commonJS, как с обычными пакетами с помощью import
         "esModuleInterop": true,
         "allowSyntheticDefaultImports": true,
+        "baseUrl": ".",
+        "paths": {
+            "*": ["./src/*"],
+        }
     },
     "ts-node": {
         "compilerOptions": {
