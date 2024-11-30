@@ -12,8 +12,7 @@ import { BuildOptions } from "./types/config";
 export const buildPlugins = ({
   paths,
   isDev,
-}: BuildOptions): WebpackPluginInstance[] => {
-  return [
+}: BuildOptions): WebpackPluginInstance[] => [
     new HTMLWebpackPlugin({
       template: paths.html,
     }),
@@ -28,4 +27,3 @@ export const buildPlugins = ({
     new ReactRefreshWebpackPlugin(),
     new HotModuleReplacementPlugin(),
   ];
-};
