@@ -6,7 +6,8 @@ module.exports = {
     extends: [
       'plugin:react/recommended',
       'airbnb',
-      "prettier"
+      'plugin:i18next/recommended',
+      'prettier'
     ],
     parser: '@typescript-eslint/parser',
     parserOptions: {
@@ -19,6 +20,7 @@ module.exports = {
     plugins: [
       'react',
       '@typescript-eslint',
+      'i18next'
     ],
     rules: {
       'react/jsx-filename-extension': [2, { extensions: ['.js', '.jsx', '.tsx'] }],
@@ -42,6 +44,7 @@ module.exports = {
       ],
       'react/button-has-type': 'off',
       'react/jsx-max-props-per-line': ['error', { maximum: 4 }],
+      'i18next/no-literal-string': ['error', { markupOnly: true }]
     },
     globals: {
       '__IS_DEV__': true,
