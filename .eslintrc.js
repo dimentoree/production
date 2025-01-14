@@ -45,9 +45,23 @@ module.exports = {
       ],
       'react/button-has-type': 'off',
       'react/jsx-max-props-per-line': ['error', { maximum: 4 }],
-      'i18next/no-literal-string': ['error', { markupOnly: true }]
+      'i18next/no-literal-string': [
+        'error', 
+        { 
+          markupOnly: true, 
+          ignoreAttribute: ['data-testid'],
+        }
+    ]
     },
     globals: {
       '__IS_DEV__': true,
-    }
+    },
+    overrides: [
+      {
+        files: ['**/src/**/*.test.{ts,tsx}'],
+        rules: {
+          'i18next/no-literal-string': 'off',
+        }
+      }
+    ]
   };
